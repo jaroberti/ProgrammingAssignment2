@@ -1,7 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+#Josh Roberti
+#22 Feb 2015
 
-## Write a short comment describing this function
+# This R script creates two functions that collectively calculate and cache the inverse of a matrix.  **For this assignment, assume that the matrix supplied is always invertible.***
+
+# function #1: makeCacheMatrix: This function creates a special "matrix" object that can cache its inverse.  This function is really a list comprising subfunctions that i) set the values of the matrix, ii) get the values of the matrix, iii) calculate the inverse of the matrix, and iv) get the value of inverse matrix
 
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
@@ -17,8 +19,7 @@ makeCacheMatrix <- function(x = matrix()) {
        getinverse = getinverse)
 }
 
-
-## Write a short comment describing this function
+#function #2: cacheSolve: This function computes the inverse of the special "matrix" returned by makeCacheMatrix above. If the inverse has already been calculated (and the matrix has not changed), then the cachesolve should retrieve the inverse from the cache.
 
 cacheSolve <- function(x, ...) {
   inv <- x$getinverse()
